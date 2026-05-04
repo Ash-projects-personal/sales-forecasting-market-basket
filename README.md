@@ -1,5 +1,10 @@
 # sales-forecasting-market-basket
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-2.0+-006400)](https://xgboost.readthedocs.io/)
+[![mlxtend](https://img.shields.io/badge/mlxtend-0.23+-2C3E50)](http://rasbt.github.io/mlxtend/)
+
 Built this locally to solve two problems: predicting inventory needs and figuring out what products people buy together. Pushing to GitHub now.
 
 First part is demand forecasting. Uses XGBoost to forecast sales volume 4 weeks out across 200 SKUs. It uses 40+ features like lag, rolling averages, seasonality, and promotional lift. The model hit around 92% accuracy (8% MAPE) on the test set, which was a huge improvement over the baseline moving average.
@@ -12,3 +17,7 @@ python forecast_and_basket.py
 ```
 
 This will generate the synthetic sales and transaction data, train the XGBoost regressor, run the Apriori basket analysis, and spit out the charts and reports into the outputs/ folder.
+
+## License
+
+Released under the [MIT License](LICENSE).
